@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e95716d-686f-4214-a0b5-e7212d83cb20">
+	<property name="ireport.zoom" value="0.8264462809917388"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM film]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="judul" class="java.lang.String"/>
+	<field name="genre" class="java.lang.String"/>
+	<field name="harga_tiket" class="java.lang.Integer"/>
+	<variable name="TOTAL_FILM" class="java.lang.Long" calculation="Count">
+		<variableExpression><![CDATA[$F{id}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="60" y="10" width="63" height="56" uuid="fc2ce84c-f780-48b2-a758-91f176012943"/>
+				<imageExpression><![CDATA["C:\\Users\\RIYANA\\Pictures\\p.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="143" y="16" width="331" height="42" uuid="cc10592a-8403-4d46-bb64-d27ee478f789"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bodoni Bd BT" size="24"/>
+				</textElement>
+				<text><![CDATA[DAFTAR FILM BIOSKOP]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="9" width="156" height="20" uuid="0352767a-5fac-4c0b-b723-e77643323a41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[FOX CINEMA MINIMALIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="9" width="126" height="20" uuid="b4c62204-5690-43d5-80a9-cedb87a72bc1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Dicetak pada tanggal:]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="434" y="9" width="100" height="20" uuid="d90ed78d-6acb-48a7-bffc-da91460cdba9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement x="74" y="11" width="100" height="20" uuid="36a9d4e5-6c42-43db-8829-324a2feefaf1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="174" y="11" width="100" height="20" uuid="f80bd5b6-4367-4692-a9de-892899a0a58b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="374" y="11" width="100" height="20" uuid="39e97b50-4f77-4e55-b0bb-49df64f67290"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="274" y="11" width="100" height="20" uuid="a2a87fe5-619f-4df6-834e-ba66fcac44b0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="74" y="11" width="100" height="20" uuid="4f6f9312-0835-4995-9569-041c59475203"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="273" y="11" width="101" height="20" uuid="07ac99e8-8efa-4a26-8343-4c5e7308563c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GENRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="11" width="100" height="20" uuid="bac90140-8cdd-474c-89ea-25dd998491ce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="11" width="100" height="20" uuid="8d1d6444-80f6-482c-866b-cf14bc06545f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="74" y="0" width="100" height="20" uuid="9db37cc0-144a-4ea6-ad20-c3d868452eec"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="174" y="0" width="100" height="20" uuid="9dd1bf53-94f0-41e1-b04a-f712c10e03a4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="274" y="0" width="100" height="20" uuid="ac8d7f02-7bbc-4759-9e64-32b7d3bc7c86"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="374" y="0" width="100" height="20" uuid="b90bce7b-282d-4eed-b413-de3f21e06a19"/>
+			</rectangle>
+			<textField>
+				<reportElement x="274" y="0" width="100" height="20" uuid="32d9588e-e1f7-4ba1-87bf-8d41e129e778"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{genre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="0" width="100" height="20" uuid="8ffa9d4f-0733-4c88-aaaf-f1f96702340c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="174" y="0" width="100" height="20" uuid="9c188244-12ec-46f9-a5fa-9842a0cfd6f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{judul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="374" y="0" width="100" height="20" uuid="26c56dfc-b7de-4472-b4ee-c489eea91a85"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{harga_tiket}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="38" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="415" y="17" width="119" height="20" uuid="d91b9eef-a1a8-40d3-8aa5-723fdbfd77da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="17" width="164" height="20" uuid="ad806ffe-2169-49db-9f7e-f920b1e49aa1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Dicetak otomatis oleh sistem]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="315" y="6" width="100" height="20" uuid="c2a61bae-08cb-46c5-916a-58395772e3f2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Jumlah Film:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="422" y="6" width="100" height="20" uuid="f87465ce-4fb8-4f8f-8305-045ecc215054"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TOTAL_FILM}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
